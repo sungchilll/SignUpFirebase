@@ -28,13 +28,13 @@ const LoginScreen = () => {
       console.log("onAuthStateChanged user", user);
       if (user) {
         navigation.navigate("Main");
-    }
+      }
     });
   }, []);
 
   const handleLogin = async () => {
     try {
-      const user = await signInWithEmailAndPassword(auth,email, password);
+      const user = await signInWithEmailAndPassword(auth, email, password);
       console.log(user);
     } catch (error) {
       Alert.alert(
@@ -69,7 +69,7 @@ const LoginScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.button, styles.buttonOutline]}
-          onPress={() => navigation.navigate('SignUp')}
+          onPress={() => navigation.navigate("SignUp")}
         >
           <Text style={styles.buttonOutlineText}>회원가입</Text>
         </TouchableOpacity>
